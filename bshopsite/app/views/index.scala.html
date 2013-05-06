@@ -1,7 +1,19 @@
-@(message: String)
-
-@main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message, style = "Java")
-    
-}
+@(users: List[User])
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>We have some users:</h1>
+    <ul>
+        @for(user <- users) {
+            <li>
+                @user.username
+            </li>
+        }
+    </ul>
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </body>
+</html>

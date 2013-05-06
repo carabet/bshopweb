@@ -42,7 +42,7 @@ public class Users extends Controller {
         } else {
             session("username", loginForm.get().username);
             return redirect(
-                routes.Projects.index()
+                routes.Application.index()
             );
         }
     }
