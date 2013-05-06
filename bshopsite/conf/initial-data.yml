@@ -1,0 +1,64 @@
+
+# Users
+
+users:
+
+    - !!models.User
+        username:      ilyal
+        usertype:      A
+        name:          Ilya Levin
+        email:         ilyal@spillcode.net
+        password:      123456
+        phone:         972544751774    
+    
+    - !!models.User
+        username:      bob
+        usertype:      E
+        name:          Bob
+        email:         bob@bshop.com
+        password:      123456
+        phone:         123-456-789012    
+
+    - !!models.User
+        username:      charlie
+        usertype:      E
+        name:          Charlie
+        email:         charlie@bshop.com
+        password:      123456
+        phone:         123-456-789012    
+
+    - !!models.User
+        username:      diane
+        usertype:      C
+        name:          Diane
+        email:         diane@bigwoop.com
+        password:      123456
+        phone:         123-456-789012    
+
+    - !!models.User
+        username:      eve
+        usertype:      C
+        name:          Eve 
+        email:         eve@eden.com
+        password:      123456
+        phone:         123-456-789012    
+    
+# Appointment
+
+appointment:
+
+    - !!models.Appointment
+        id:         1
+        notes:      Make it pretty   
+        datetime:   13:00 28/05/2013
+        reqBarber:
+        	-!!models.User
+        	 username: bob
+        reqCustomer:
+        	-!!models.User
+        	 username: eve
+
+                
+# CatalogItem
+
+catalogitem:
