@@ -5,7 +5,7 @@ users:
 
     - !!models.User
         username:      ilyal
-        usertype:      A
+        usertype:      Admin
         name:          Ilya Levin
         email:         ilyal@spillcode.net
         password:      123456
@@ -13,7 +13,7 @@ users:
     
     - !!models.User
         username:      bob
-        usertype:      E
+        usertype:      Employee
         name:          Bob
         email:         bob@bshop.com
         password:      123456
@@ -21,7 +21,7 @@ users:
 
     - !!models.User
         username:      charlie
-        usertype:      E
+        usertype:      Employee
         name:          Charlie
         email:         charlie@bshop.com
         password:      123456
@@ -29,7 +29,7 @@ users:
 
     - !!models.User
         username:      diane
-        usertype:      C
+        usertype:      Customer
         name:          Diane
         email:         diane@bigwoop.com
         password:      123456
@@ -37,7 +37,7 @@ users:
 
     - !!models.User
         username:      eve
-        usertype:      C
+        usertype:      Customer
         name:          Eve 
         email:         eve@eden.com
         password:      123456
@@ -45,20 +45,13 @@ users:
     
 # Appointment
 
-appointment:
+appointments:
 
     - !!models.Appointment
         id:         1
         notes:      Make it pretty   
-        datetime:   13:00 28/05/2013
-        reqBarber:
-        	-!!models.User
-        	 username: bob
-        reqCustomer:
-        	-!!models.User
-        	 username: eve
-
-                
-# CatalogItem
-
-catalogitem:
+        datetime:   2013-05-28 13:00:00
+        reqBarber:  !!models.User
+                      username: bob
+        reqCustomer: !!models.User
+                       username: eve
